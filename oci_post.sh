@@ -34,7 +34,7 @@ privateKeyPath=`tail -6 ~/.oci/config | grep key_file | awk -F"=" '{ print $2 }'
 fingerprint=`tail -6 ~/.oci/config | grep fingerprint | awk -F"=" '{ print $2 }'`
 
 # Compartment id (taken from the oci cli config)
-compatment_id=`tail -8 ~/.oci/oci_cli_rc | grep compartment-id | awk -F"=" '{print $2}'`
+compartment_id=`tail -8 ~/.oci/oci_cli_rc | grep compartment-id | awk -F"=" '{print $2}'`
 
 # The REST api to call with the POST update
 rest_api="/20160918/instances"
@@ -49,7 +49,7 @@ read -p 'VCN subnet id:' subnetId
 
 # Generate temporary file
 cp post_body_tmpl.json post_body.json
-sed -i -e "s|###compartmentId###|${compatment_id}|" post_body.json
+sed -i -e "s|###compartmentId###|${compartment_id}|" post_body.json
 sed -i -e "s|###displayName###|${displayName}|" post_body.json
 sed -i -e "s|###sshPubKey###|${sshPubKey}|" post_body.json
 sed -i -e "s|###subnetId###|${subnetId}|" post_body.json

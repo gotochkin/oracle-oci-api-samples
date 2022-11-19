@@ -33,7 +33,7 @@ privateKeyPath=`tail -6 ~/.oci/config | grep key_file | awk -F"=" '{ print $2 }'
 
 # fingerprint of the private key for this user
 fingerprint=`tail -6 ~/.oci/config | grep fingerprint | awk -F"=" '{ print $2 }'`
-#compatment_id=`tail -8 ~/.oci/oci_cli_rc | grep compartment-id | awk -F"=" '{print $2}'`
+#compartment_id=`tail -8 ~/.oci/oci_cli_rc | grep compartment-id | awk -F"=" '{print $2}'`
 
 # Applied to the instance with the ID, instance id is a required parameter
 read -p 'Instance ocid:' instanceId

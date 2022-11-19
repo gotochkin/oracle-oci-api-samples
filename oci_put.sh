@@ -32,12 +32,7 @@ privateKeyPath=`tail -6 ~/.oci/config | grep key_file | awk -F"=" '{ print $2 }'
 
 # Fingerprint of the private key for this user
 fingerprint=`tail -6 ~/.oci/config | grep fingerprint | awk -F"=" '{ print $2 }'`
-#compatment_id=`tail -8 ~/.oci/oci_cli_rc | grep compartment-id | awk -F"=" '{print $2}'`
 
-# The REST api you want to call, with any required paramters.
-#rest_api="/20160918/instances/${instance_id}"
-#instanceId="ocid1.instance.oc1.ca-toronto-1.an2g6ljr2lpveaycvvm27mblpcnc44updby7zvcc55pvkw2mer7kejh3ghla"
-# Applied to the instance with the ID
 
 # Applied to the instance with the ID, instance id is a required parameter
 read -p 'Instance ocid:' instanceId
