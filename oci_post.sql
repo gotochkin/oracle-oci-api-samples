@@ -19,7 +19,7 @@ DECLARE
     credential_name VARCHAR2(100);
     user_id VARCHAR2(200);
     tenancy_id VARCHAR2(200);
-    private_key VARCHAR2(1000);
+    private_key VARCHAR2(3000);
     fingerprint VARCHAR2(100);
 begin
     -- Credential name for the OCI user credentials

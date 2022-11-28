@@ -25,7 +25,7 @@ DECLARE
     credential_name  varchar2(100);
 BEGIN
     -- Instance ID to be deleted
-    instance_id:='&credential_name';
+    instance_id:='&instance_id';
     -- Credential name for the OCI user credentials
     credential_name:='&credential_name';
     -- Run the function and get response 

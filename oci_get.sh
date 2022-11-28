@@ -34,7 +34,7 @@ privateKeyPath=`tail -6 ~/.oci/config | grep key_file | awk -F"=" '{ print $2 }'
 fingerprint=`tail -6 ~/.oci/config | grep fingerprint | awk -F"=" '{ print $2 }'`
 
 # Compartment id (taken from the oci cli config)
-compartment_id=`tail -8 ~/.oci/oci_cli_rc | grep compartment-id | awk -F"=" '{print $2}'`
+compartment_id=`tail -8 ~/.oci/oci_cli_rc | grep compartment-id | grep -v "#" | awk -F"=" '{print $2}'`
 
 # The REST api you want to call, compartment id is a required parameter
 rest_api="/20160918/instances?compartmentId=${compartment_id}"
