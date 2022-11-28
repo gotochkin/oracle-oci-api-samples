@@ -41,7 +41,7 @@ begin
     );
 end;
 -- ############################################################################
--- Create an instance instances in a compartment
+-- Create an instance in a compartment
 -- ############################################################################
 set serveroutput on
 DECLARE
